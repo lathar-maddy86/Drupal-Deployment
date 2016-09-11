@@ -1,0 +1,10 @@
+---
+  
+- name: Remove previously downloaded civicrm package
+  file: name=*civicrm* state=absent
+  
+- name: Download civicrm
+  command: wget https://sourceforge.net/projects/civicrm/files/civicrm-stable/4.7.11/civicrm-4.7.11-drupal.tar.gz
+
+- name: Extract civicrm in drupal modules
+  unarchive: src=/home/ubuntu/playbook/civicrm-4.7.11-drupal.tar.gz dest=/var/www/html/drupal/sites/all/modules/

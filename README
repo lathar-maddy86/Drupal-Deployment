@@ -1,0 +1,8 @@
+**************
+
+- This playbook deploys drupal 7 and civicrm 4.7.11 on ubuntu 14.04
+
+- It also installs and configure Nginx, mysql and php-fpm.
+
+- To deploy mysql it hardcodes root's password, which can be considered as a security risk.
+

@@ -1,0 +1,22 @@
+---
+
+- hosts: localhost
+
+  sudo: yes
+
+  vars:
+    - mysql_root_pass: Passw0rd2016
+    - db_name_drupal: drupal
+    - db_name_civicrm: civicrm
+    - db_user: drupal_user
+    - db_password: Passw0rd2016
+
+  roles:
+    - update
+    - git
+    - php-fpm
+    - nginx
+    - mysql
+    - drupal
+    - civicrm
+    - drush
